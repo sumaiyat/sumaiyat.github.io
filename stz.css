@@ -145,7 +145,7 @@ a.linkedin-link {
   }
   
   details[open] summary span.icon {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
   
   summary {

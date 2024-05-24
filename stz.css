@@ -39,13 +39,13 @@ body {
     background: #010101;
     color: #fff;
     overflow-y: auto;
-    padding-left: 200px;
-    padding-right: 200px;
 }
 
 main {
     padding: 40px;
     overflow-y: auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section p {
@@ -151,6 +151,7 @@ a.linkedin-link {
   summary {
     display: flex;
     cursor: pointer;
+    align-items: center;
   }
   
   summary::-webkit-details-marker {

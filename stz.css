@@ -58,11 +58,7 @@ a {
     text-decoration: none;
 }
 
-details {
-  padding: 10px;
-  border: 3px solid #fff;
-  border-radius: 10px;
-}
+
 
 a:hover {
     text-decoration: underline;
@@ -133,10 +129,52 @@ a.linkedin-link {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: #111;
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+.button-2 {
+  appearance: none;
+  background-color: #111;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: left;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-2:disabled {
+  pointer-events: none;
+}
+
+.button-2:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-2:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
   details {

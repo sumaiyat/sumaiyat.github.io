@@ -1,5 +1,5 @@
 header {
-    background: #201f1ffe;
+    background: #14171c;
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
@@ -21,7 +21,7 @@ header p:last-child {
 
 
 footer {
-    background: #201f1ffe;
+    background: #14171c;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -36,7 +36,7 @@ body {
     line-height: 1.2;
     margin: 0;
     padding: 0;
-    background: #201f1ffe;
+    background: #14171c;
     color: #fff;
     overflow-y: auto;
 }

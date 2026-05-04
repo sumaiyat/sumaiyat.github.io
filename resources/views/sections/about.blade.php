@@ -7,7 +7,7 @@
             <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-9xl font-display font-bold text-gradient opacity-30">
-                STZ
+                SZ
               </div>
             </div>
             <div class="absolute top-8 right-8 w-24 h-24 border border-primary/30 rounded-lg rotate-12"></div>

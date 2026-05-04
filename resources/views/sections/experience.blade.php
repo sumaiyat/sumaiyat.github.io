@@ -135,7 +135,17 @@
               <div class="p-6 rounded-2xl border border-border bg-card hover:shadow-card transition-all duration-300">
                 <div class="flex flex-wrap items-center gap-3 mb-3">
                   <div class="p-2 rounded-lg {{ $exp['type'] === 'work' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent' }}">
-                    {{ $exp['type'] === 'work' ? 'W' : 'E' }}
+                    @if ($exp['type'] === 'work')
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 7h18v12H3z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M9 7V5h6v2" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    @else
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 8l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M7 10v4c0 1.7 2.2 3 5 3s5-1.3 5-3v-4" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    @endif
                   </div>
                   <span class="text-sm text-muted-foreground">{{ $exp['period'] }}</span>
                   @if ($exp['location'])

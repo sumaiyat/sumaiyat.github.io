@@ -4,7 +4,9 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "build:lovable": "npm --prefix frontend/lovable run build && node scripts/publish-lovable.mjs",
+        "sync:lovable": "node scripts/publish-lovable.mjs"
     },
     "devDependencies": {
         "@tailwindcss/postcss": "^4.1.18",

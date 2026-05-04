@@ -27,10 +27,12 @@
 
         @foreach ($skills as $skill)
           <div class="group p-6 rounded-2xl border border-border bg-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors duration-300 {{ $skill[2] == 'primary' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent' }}">
-              <span class="text-sm font-bold">{{ strtoupper(substr($skill[0], 0, 1)) }}</span>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors duration-300 {{ $skill[2] == 'primary' ? 'bg-primary/20 text-primary' : 'bg-accent/20 text-accent' }}">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-display font-semibold text-foreground mb-4">{{ $skill[0] }}</h3>
+            <h3 class="text-xl font-display font-bold text-foreground mb-4">{{ $skill[0] }}</h3>
             <div class="flex flex-wrap gap-2">
               @foreach ($skill[1] as $item)
                 <span class="px-3 py-1 text-sm rounded-full bg-secondary text-muted-foreground">
@@ -43,17 +45,17 @@
       </div>
 
       <div class="mt-12 p-8 rounded-2xl border border-border bg-card">
-        <h3 class="text-xl font-display font-semibold text-foreground mb-6 text-center">
+        <h3 class="text-2xl font-display font-bold text-foreground mb-8 text-center">
           Languages
         </h3>
         <div class="flex flex-wrap justify-center gap-6">
           <div class="text-center">
-            <p class="text-lg font-medium text-foreground">English & Bengali</p>
+            <p class="text-lg font-medium text-foreground mb-2">English & Bengali</p>
             <p class="text-sm text-muted-foreground">Professional proficiency</p>
           </div>
-          <div class="w-px bg-border">
+          <div class="w-px bg-border"></div>
           <div class="text-center">
-            <p class="text-lg font-medium text-foreground">Urdu & Hindi</p>
+            <p class="text-lg font-medium text-foreground mb-2">Urdu & Hindi</p>
             <p class="text-sm text-muted-foreground">Conversational proficiency</p>
           </div>
         </div>

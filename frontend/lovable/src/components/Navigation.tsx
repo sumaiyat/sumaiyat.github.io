@@ -58,7 +58,7 @@ export const Navigation = () => {
           }}
           className="text-2xl font-display font-semibold text-gradient"
         >
-          SZ
+          STZ
         </a>
 
         <div className="hidden md:flex items-center gap-8">

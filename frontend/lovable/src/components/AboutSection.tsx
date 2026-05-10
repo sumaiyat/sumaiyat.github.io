@@ -10,14 +10,26 @@ export const AboutSection = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-card border border-border overflow-hidden relative shadow-card">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+                
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-9xl font-display font-bold text-gradient opacity-30">
-                    SZ
+                    STZ
                   </div>
                 </div>
+                
                 {/* Decorative elements */}
                 <div className="absolute top-8 right-8 w-24 h-24 border border-primary/30 rounded-lg rotate-12" />
                 <div className="absolute bottom-8 left-8 w-32 h-32 border border-accent/30 rounded-full" />
+
+                {/* Profile Image */}
+                <img 
+                  src="/profile.jpg" 
+                  alt="Sumaiya Tabassum Zakaria" 
+                  className="absolute inset-0 w-full h-full object-cover z-10"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
               </div>
               {/* Floating card */}
               <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-card">

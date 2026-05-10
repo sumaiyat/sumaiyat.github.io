@@ -9,8 +9,6 @@ export const Footer = () => {
             {/* Logo/Name */}
             <div className="flex items-center gap-2">
               <span className="text-2xl font-display font-bold text-gradient">STZ</span>
-              <span className="text-muted-foreground">|</span>
-              <span className="text-sm text-muted-foreground">Sumaiya Tabassum Zakaria</span>
             </div>
 
             {/* Social Links */}

@@ -34,7 +34,7 @@ export const HeroSection = () => {
 
           {/* Title */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 opacity-0 animate-fade-up animation-delay-200">
-            Head of Product | Product & Engineering Leader
+            Senior Product Manager (Product & Engineering Lead)
           </p>
           <p className="text-lg text-primary mb-8 opacity-0 animate-fade-up animation-delay-200">
             Agile Practitioner

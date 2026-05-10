@@ -159,6 +159,10 @@ export const ExperienceSection = () => {
                 {/* Content */}
                 <div className="ml-10 md:ml-16 flex-1">
                   <div className="p-6 rounded-2xl border border-border bg-card hover:shadow-card transition-all duration-300">
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-1">
+                      {exp.title}
+                    </h3>
+                    <p className="text-primary font-medium mb-4">{exp.company}</p>
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <div
                         className={cn(
@@ -179,10 +183,6 @@ export const ExperienceSection = () => {
                         <span className="text-sm text-muted-foreground">• {exp.location}</span>
                       )}
                     </div>
-                    <h3 className="text-xl font-display font-semibold text-foreground mb-1">
-                      {exp.title}
-                    </h3>
-                    <p className="text-primary font-medium mb-3">{exp.company}</p>
                     {exp.description && (
                       <p className="text-muted-foreground text-sm mb-4">{exp.description}</p>
                     )}

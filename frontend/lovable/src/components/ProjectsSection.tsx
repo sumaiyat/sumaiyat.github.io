@@ -48,7 +48,7 @@ const achievements = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-32 relative bg-secondary/30">
+    <section id="projects" className="py-32 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

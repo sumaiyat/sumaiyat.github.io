@@ -4,32 +4,42 @@ import { cn } from "@/lib/utils";
 const experiences = [
   {
     type: "work",
-    title: "Head of Product & Engineering",
+    title: "Senior Product Manager (Product & Engineering Lead)",
     company: "Repocket",
     location: "Remote",
     period: "February 2025 – Present",
-    description: "Structured Repocket from the ground up, establishing product, engineering, and growth processes that enabled the platform to scale efficiently across multiple global markets.",
+    description: "",
     achievements: [
-      "Cut release cycles by ~30% through agile transformation and workflow automation",
-      "Defined and executed product vision driving the highest revenue in company history",
-      "Led migration from legacy GoKart to Affise, integrating 15+ providers",
-      "Achieved 95%+ conversion performance from the U.S.",
-      "Introduced and scaled OKRs across product, engineering, and growth teams",
+      "Led a cross-functional team of 12 across product, engineering, BI, operations, QA, DevOps, and design to deliver onboarding, referral, and monetization features, while driving integrations with external partners that improved DAU, retention, conversion rates, and platform revenue.",
+      "Owned end-to-end product lifecycle from discovery to release, reducing release cycle time by 30% through sprint restructuring and workflow automation.",
+      "Drove the quarterly product roadmap across growth and monetization initiatives, contributing to the highest revenue period in company history.",
+      "Led migration from GoKart to Affise and integrated 15+ providers, implementing EPC-based ranking logic that improved offer conversion and platform stability.",
+      "Redesigned onboarding and referral flows with push notifications and tiered rewards, increasing DAU by double digits and improving 30-day retention.",
+      "Optimized U.S. traffic performance, achieving 95%+ conversion efficiency through offer surfacing logic and traffic quality filtering.",
+      "Partnered with B2B providers to secure high-performing inventory, maintaining daily revenue targets and supporting sustained quarter-over-quarter growth.",
+      "Built a data-driven prioritization framework using EPC tiers, retention curves, and traffic quality metrics to align roadmap decisions with revenue impact.",
+      "Improved payout reliability and fraud controls in collaboration with Ops and Risk teams, reducing reversals and protecting net revenue."
     ],
   },
   {
     type: "work",
     title: "Senior Product Manager & Scrum Master",
-    company: "10 Minute School",
+    company: "10 Minute School (Online Tutoring & Learning Platform – EdTech)",
     location: "Dhaka, Bangladesh",
     period: "February 2022 – July 2024",
-    description: "Led product strategy for Platform, K-12 & Skill Development at Bangladesh's leading EdTech company.",
+    description: "",
     achievements: [
-      "Drove 23% YoY revenue growth through product-led strategies",
-      "Reduced user abandonment by 12% and improved NPS by 20%",
-      "Boosted sprint completion rates from 75% to 92%",
-      "Launched IELTS mock test services generating 40% of fiscal-year revenue",
-      "Spearheaded SaaS tool development (ERP, CMS, CRM, LMS)",
+      "Led and collaborated with a cross-functional team of 31 engineers, DevOps, QA, designers, and BI specialists, in collaboration with 9 PMs, to deliver impactful platform and engagement features.",
+      "Owned end-to-end B2B and B2C payment flows, improving transaction success rate and building scalable checkout infrastructure across web and mobile.",
+      "Led development of internal ERP, CMS, CRM, and LMS tools used by 500+ academic staff, reducing manual operational workload and enhancing learner lifecycle management.",
+      "Launched live class platform, assessment engine, and instructor dashboards, increasing student engagement and course completion rates.",
+      "Built and launched IELTS mock test product within the Skill Development portfolio, contributing to 40% of annual business unit revenue.",
+      "Analyzed user funnel data using Mixpanel and Metabase, identifying drop-off points and implementing UX improvements that reduced checkout abandonment by 12%.",
+      "Drove 23% YoY revenue growth through feature-level experimentation and product-led engagement initiatives.",
+      "Mentored 8+ Product Managers, improving roadmap prioritization through KPI-driven decision frameworks.",
+      "Led Agile delivery across 3 Scrum teams of PMs, developers, and QA, aligning sprint planning with quarterly business goals.",
+      "Improved sprint completion rate from 75% to 92% by restructuring backlog grooming and release planning workflows.",
+      "Increased team delivery consistency through proactive blocker resolution and cross-functional coordination."
     ],
   },
   {
@@ -38,48 +48,52 @@ const experiences = [
     company: "B–Trac Solutions Limited (Ami Probashi)",
     location: "Dhaka, Bangladesh",
     period: "February 2021 – August 2021",
-    description: "Managed full product lifecycle for a network serving migrants, foreign employers, and recruiting agencies.",
+    description: "",
     achievements: [
-      "Increased client satisfaction scores by 22%",
-      "Supported 80%+ of daily operations through rapid issue resolution",
-      "Streamlined recruitment workflows driving user adoption",
+      "Owned end-to-end product lifecycle from discovery to rollout for recruitment platform connecting migrants, employers, and agencies.",
+      "Redesigned recruitment workflows in collaboration with engineering, improving process efficiency and increasing client satisfaction scores by 22%.",
+      "Prioritized product opportunities aligned with business and regulatory requirements, balancing operational stability with feature delivery.",
+      "Supported core platform operations impacting 80%+ of daily transactions by resolving high-priority issues and improving system reliability."
     ],
   },
   {
     type: "work",
-    title: "Product Manager",
-    company: "Evaly.com.bd",
+    title: "Technical Product Manager",
+    company: "Evaly.com.bd (E-commerce Platform)",
     location: "Dhaka, Bangladesh",
     period: "June 2020 – January 2021",
-    description: "Managed 7 product streams including E-commerce, Food Delivery, Logistics, and Finance with 30+ team members.",
+    description: "",
     achievements: [
-      "Reduced time-to-market by 15%",
-      "Created PRDs, BRDs, and ERDs for development clarity",
-      "Coordinated cross-functional delivery across all initiatives",
+      "Led product initiatives across 7 verticals including e-commerce, food delivery, logistics, finance, and internal ERP systems, coordinating 30+ cross-functional team members.",
+      "Delivered cross-functional roadmap initiatives that reduced time-to-market by 15% through improved sprint planning and release coordination.",
+      "Authored detailed PRDs and technical documentation to align engineering and business requirements across multiple product streams.",
+      "Collaborated closely with engineering teams to define feature scope, prioritize backlog, and ensure on-time delivery across marketplace and logistics platforms."
     ],
   },
   {
     type: "work",
     title: "Software Support Engineer (APAC)",
-    company: "Google (Street View – Geo Data Operations)",
+    company: "Google (Street View – Geo Data Operations & Field Support)",
     location: "Kuala Lumpur, Malaysia",
     period: "March 2018 – March 2020",
-    description: "Supported Geo Data Operations for Google Street View across the APAC region.",
+    description: "",
     achievements: [
-      "Maintained 99.8% system uptime",
-      "Improved troubleshooting efficiency by 10%",
-      "Trained new technical support engineers",
+      "Supported geo-data platforms with 99.8% system uptime, contributing to reliability of large-scale mapping and data infrastructure.",
+      "Resolved production issues and software defects across distributed systems, improving troubleshooting efficiency by 10%.",
+      "Collaborated with global engineering teams to maintain mapping and data integration products.",
+      "Trained new engineers and enhanced monitoring workflows to improve operational visibility."
     ],
   },
   {
     type: "work",
     title: "Network Administrator",
-    company: "Brandt International (BPO)",
+    company: "Brandt International (Business Consulting & Process Outsourcing – BPO)",
     location: "Kuala Lumpur, Malaysia",
     period: "March 2017 – November 2017",
-    description: "Administered LAN/WAN networks, storage, and authentication systems for a multi-client BPO environment.",
+    description: "",
     achievements: [
-      "Reduced operational downtime through timely issue resolution",
+      "Administered LAN/WAN networks, storage, and authentication systems supporting multi-client enterprise operations.",
+      "Reduced operational downtime through proactive network monitoring and rapid issue resolution."
     ],
   },
   {
@@ -88,8 +102,10 @@ const experiences = [
     company: "HappyGD Technology PLT (WeChat)",
     location: "Kuala Lumpur, Malaysia",
     period: "February 2016 – May 2016",
-    description: "Developed and maintained software applications for client integrations with WeChat ecosystem.",
-    achievements: [],
+    description: "",
+    achievements: [
+      "Developed and maintained software integrations within the WeChat ecosystem, supporting client-facing application features."
+    ],
   },
   {
     type: "education",
@@ -123,7 +139,7 @@ export const ExperienceSection = () => {
               Experience & <span className="text-gradient">Education</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A timeline of my professional journey from Software Engineer to Head of Product & Engineering.
+              A timeline of my professional journey from Software Engineer to Senior Product Manager.
             </p>
           </div>
 

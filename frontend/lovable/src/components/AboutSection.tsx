@@ -1,4 +1,6 @@
 export const AboutSection = () => {
+  const yearsOfExperience = new Date().getFullYear() - 2016;
+
   return (
     <section id="about" className="py-32 relative">
       <div className="container mx-auto px-6">
@@ -20,7 +22,7 @@ export const AboutSection = () => {
               {/* Floating card */}
               <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-card">
                 <p className="text-sm text-muted-foreground">Years of Experience</p>
-                <p className="text-3xl font-display font-bold text-gradient">9+</p>
+                <p className="text-3xl font-display font-bold text-gradient">{yearsOfExperience}+</p>
               </div>
             </div>
 
@@ -33,7 +35,7 @@ export const AboutSection = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Strategic and data-driven Product & Engineering Leader with 9+ years of experience 
+                  Strategic and data-driven Product & Engineering Leader with {yearsOfExperience}+ years of experience 
                   building and scaling B2B and B2C products across EdTech, SaaS, and digital consumer markets.
                 </p>
                 <p>
@@ -49,20 +51,20 @@ export const AboutSection = () => {
               {/* Certifications */}
               <div className="mt-8 flex flex-wrap gap-3">
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  CSM Certified
+                  Certified Scrum Master (CSM)
                 </span>
                 <span className="px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium">
-                  CSPO Certified
+                  Certified Scrum Product Owner (CSPO)
                 </span>
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  ITIL v3 Foundation
+                  ITIL v3 Foundation Certificate – AXELOS Global Best Practice
                 </span>
               </div>
 
               {/* Quick stats */}
               <div className="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-border">
                 <div>
-                  <p className="text-3xl font-display font-bold text-gradient">9+</p>
+                  <p className="text-3xl font-display font-bold text-gradient">{yearsOfExperience}+</p>
                   <p className="text-sm text-muted-foreground mt-1">Years Experience</p>
                 </div>
                 <div>

@@ -8,6 +8,8 @@ export const HeroSection = () => {
     }
   };
 
+  const yearsOfExperience = new Date().getFullYear() - 2016;
+
   return (
     <section
       id="home"
@@ -42,7 +44,7 @@ export const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 opacity-0 animate-fade-up animation-delay-300">
-            Strategic and data-driven Product & Engineering Leader with 9+ years of experience
+            Strategic and data-driven Product & Engineering Leader with {yearsOfExperience}+ years of experience
             building and scaling B2B and B2C products across EdTech, SaaS, and digital consumer markets.
           </p>
 

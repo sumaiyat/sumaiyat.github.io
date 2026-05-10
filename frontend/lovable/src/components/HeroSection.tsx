@@ -44,8 +44,7 @@ export const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 opacity-0 animate-fade-up animation-delay-300">
-            Strategic and data-driven Product & Engineering Leader with {yearsOfExperience}+ years of experience
-            building and scaling B2B and B2C products across EdTech, SaaS, and digital consumer markets.
+            Senior Product Manager & Engineering Lead with {yearsOfExperience}+ years of experience building scalable B2B and B2C SaaS platforms. I specialize in bridging growth strategy with technical execution to drive user retention, optimize monetization, and accelerate revenue.
           </p>
 
           {/* Social Links */}

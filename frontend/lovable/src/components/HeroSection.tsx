@@ -39,7 +39,7 @@ export const HeroSection = () => {
             Senior Product Manager (Product & Engineering Lead)
           </p>
           <p className="text-lg text-primary mb-8 opacity-0 animate-fade-up animation-delay-200">
-            Agile Practitioner
+            SaaS Platforms & Growth | B2B & B2C Products | Monetization, Retention & Integrations
           </p>
 
           {/* Description */}

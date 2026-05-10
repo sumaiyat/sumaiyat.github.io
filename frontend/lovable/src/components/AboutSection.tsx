@@ -35,16 +35,19 @@ export const AboutSection = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Strategic and data-driven Product & Engineering Leader with {yearsOfExperience}+ years of experience 
-                  building and scaling B2B and B2C products across EdTech, SaaS, and digital consumer markets.
+                  I’m a Senior Product Manager with {yearsOfExperience}+ years of experience building and scaling B2B and B2C SaaS products across growth, platform, and marketplace environments.
                 </p>
                 <p>
-                  Adept at defining product vision, leading high-performing teams, and driving measurable 
-                  growth through experimentation, analytics, and product-led strategy.
+                  I’ve led cross-functional teams of up to 30+ engineers, designers, BI, and operations partners to ship onboarding, monetization, payments, and engagement initiatives that drive measurable impact. My work has contributed to 23% YoY revenue growth, 40% portfolio-level revenue contribution from new product launches, improved funnel conversion, and accelerated release cycles by 30%.
                 </p>
                 <p>
-                  Experienced in bridging business and technology functions to deliver scalable, 
-                  customer-focused solutions that enhance engagement, retention, and revenue performance.
+                  I operate at the intersection of growth and execution, defining roadmaps, prioritizing with data, running experimentation frameworks, and aligning engineering delivery with business outcomes. My experience spans EdTech, consumer marketplaces, and digital platforms with a strong focus on retention, monetization, and scalable infrastructure.
+                </p>
+                <p>
+                  With a technical foundation in software engineering and systems reliability, I’m comfortable working closely with engineering teams on APIs, mobile release management, analytics tooling, and platform migrations.
+                </p>
+                <p>
+                  Currently based in Irvine, California, and open to Senior Product Manager opportunities in growth, marketplace, platform, or consumer SaaS environments.
                 </p>
               </div>
 

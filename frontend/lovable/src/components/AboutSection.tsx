@@ -5,6 +5,14 @@ export const AboutSection = () => {
     <section id="about" className="py-32 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <p className="text-primary font-medium mb-4">About Me</p>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+              Product & Engineering <span className="text-gradient">Leader</span>
+            </h2>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image/Visual */}
             <div className="relative">
@@ -40,11 +48,6 @@ export const AboutSection = () => {
 
             {/* Content */}
             <div>
-              <p className="text-primary font-medium mb-4">About Me</p>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-                Product & Engineering
-                <span className="text-gradient"> Leader</span>
-              </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   I’m a Senior Product Manager with {yearsOfExperience}+ years of experience building and scaling B2B and B2C SaaS products across growth, platform, and marketplace environments.

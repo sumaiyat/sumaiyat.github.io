@@ -48,7 +48,7 @@ export const AboutSection = () => {
 
             {/* Content */}
             <div>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   I’m a Senior Product Manager with {yearsOfExperience}+ years of experience building and scaling B2B and B2C SaaS products across growth, platform, and marketplace environments.
                 </p>
@@ -67,31 +67,31 @@ export const AboutSection = () => {
               </div>
 
               {/* Certifications */}
-              <div className="mt-8 flex flex-wrap gap-3">
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium">
                   Certified Scrum Master (CSM)
                 </span>
-                <span className="px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium">
+                <span className="px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-medium">
                   Certified Scrum Product Owner (CSPO)
                 </span>
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  ITIL v3 Foundation Certificate – AXELOS Global Best Practice
+                <span className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium">
+                  ITIL v3 Foundation Certificate
                 </span>
               </div>
 
               {/* Quick stats */}
-              <div className="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-border">
+              <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-border">
                 <div>
-                  <p className="text-3xl font-display font-bold text-gradient">{yearsOfExperience}+</p>
-                  <p className="text-sm text-muted-foreground mt-1">Years Experience</p>
+                  <p className="text-2xl font-display font-bold text-gradient">{yearsOfExperience}+</p>
+                  <p className="text-xs text-muted-foreground mt-1">Years Experience</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-display font-bold text-gradient-accent">30+</p>
-                  <p className="text-sm text-muted-foreground mt-1">Team Members Led</p>
+                  <p className="text-2xl font-display font-bold text-gradient-accent">30+</p>
+                  <p className="text-xs text-muted-foreground mt-1">Team Members Led</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-display font-bold text-gradient">23%</p>
-                  <p className="text-sm text-muted-foreground mt-1">YoY Revenue Growth</p>
+                  <p className="text-2xl font-display font-bold text-gradient">23%</p>
+                  <p className="text-xs text-muted-foreground mt-1">YoY Revenue Growth</p>
                 </div>
               </div>
             </div>

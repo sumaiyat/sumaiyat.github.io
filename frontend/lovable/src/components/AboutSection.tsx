@@ -32,7 +32,7 @@ export const AboutSection = () => {
                 />
               </div>
               {/* Floating card */}
-              <div className="absolute bottom-6 right-6 bg-card border border-border rounded-xl p-4 shadow-card z-30">
+              <div className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-card z-50">
                 <p className="text-sm text-muted-foreground">Years of Experience</p>
                 <p className="text-3xl font-display font-bold text-gradient">{yearsOfExperience}+</p>
               </div>

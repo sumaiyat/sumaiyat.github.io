@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -13,6 +14,7 @@ const navLinks = [
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,7 @@ export const Navigation = () => {
   }, []);
 
   const scrollToSection = (href: string) => {
+    setIsMobileMenuOpen(false); // Close mobile menu when a link is clicked
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -44,8 +47,8 @@ export const Navigation = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border py-4"
+        isScrolled || isMobileMenuOpen
+          ? "bg-background/95 backdrop-blur-xl border-b border-border py-4"
           : "bg-transparent py-6"
       )}
     >
@@ -61,6 +64,7 @@ export const Navigation = () => {
           STZ
         </a>
 
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -95,7 +99,54 @@ export const Navigation = () => {
         >
           Get in Touch
         </a>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden p-2 text-foreground"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle Menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {/* Mobile Navigation Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-lg animate-fade-in">
+          <div className="flex flex-col py-4 px-6 gap-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(link.href);
+                }}
+                className={cn(
+                  "text-lg font-medium transition-colors duration-300",
+                  activeSection === link.href.slice(1)
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                {link.label}
+              </a>
+            ))}
+            <div className="pt-4 mt-2 border-t border-border">
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("#contact");
+                }}
+                className="inline-flex w-full justify-center px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+              >
+                Get in Touch
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

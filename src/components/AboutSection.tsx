@@ -31,7 +31,7 @@ export const AboutSection = () => {
 
                 {/* Profile Image */}
                 <img
-                  src="/profile.jpg"
+                  src="/profile.jpg?v=2"
                   alt="Sumaiya Tabassum Zakaria"
                   className="absolute inset-0 w-full h-full object-cover z-10"
                   onError={(e) => {

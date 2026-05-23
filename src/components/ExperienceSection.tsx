@@ -1,4 +1,5 @@
-import { Briefcase, GraduationCap } from "lucide-react";
+import { useState } from "react";
+import { Briefcase, GraduationCap, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const experiences = [
@@ -127,6 +128,91 @@ const experiences = [
   },
 ];
 
+const ExperienceItem = ({ exp }: { exp: typeof experiences[0] }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const hasDetails = !!exp.description || exp.achievements.length > 0;
+
+  return (
+    <div 
+      className={cn(
+        "p-6 rounded-2xl border border-border bg-card transition-all duration-300",
+        hasDetails ? "cursor-pointer hover:shadow-card" : "hover:shadow-card"
+      )}
+      onClick={() => hasDetails && setIsOpen(!isOpen)}
+    >
+      <div className="flex items-start gap-4">
+        <div
+          className={cn(
+            "p-2 rounded-lg shrink-0 mt-1",
+            exp.type === "work"
+              ? "bg-primary/10 text-primary"
+              : "bg-accent/10 text-accent"
+          )}
+        >
+          {exp.type === "work" ? (
+            <Briefcase className="w-4 h-4" />
+          ) : (
+            <GraduationCap className="w-4 h-4" />
+          )}
+        </div>
+        <div className="flex-1">
+          <div className="flex justify-between items-start gap-4">
+            <div>
+              <h3 className="text-xl font-display font-semibold text-foreground mb-1">
+                {exp.title}
+              </h3>
+              <p className="text-primary font-medium mb-2">{exp.company}</p>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-sm text-muted-foreground">{exp.period}</span>
+                {exp.location && (
+                  <span className="text-sm text-muted-foreground">• {exp.location}</span>
+                )}
+              </div>
+            </div>
+            {hasDetails && (
+              <button
+                className="p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors shrink-0"
+                aria-label="Toggle details"
+              >
+                <ChevronDown
+                  className={cn(
+                    "w-5 h-5 transition-transform duration-300",
+                    isOpen && "rotate-180"
+                  )}
+                />
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div 
+        className={cn(
+          "grid transition-all duration-300 ease-in-out",
+          isOpen ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"
+        )}
+      >
+        <div className="overflow-hidden">
+          {exp.description && (
+            <p className="text-muted-foreground text-sm mb-4">{exp.description}</p>
+          )}
+          {exp.achievements.length > 0 && (
+            <ul className="space-y-2">
+              {exp.achievements.map((achievement, i) => (
+                <li key={i} className="text-sm text-muted-foreground flex gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>{achievement}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 export const ExperienceSection = () => {
   return (
     <section id="experience" className="py-32 relative bg-secondary/30">
@@ -158,49 +244,7 @@ export const ExperienceSection = () => {
 
                 {/* Content */}
                 <div className="ml-10 md:ml-16 flex-1">
-                  <div className="p-6 rounded-2xl border border-border bg-card hover:shadow-card transition-all duration-300">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div
-                        className={cn(
-                          "p-2 rounded-lg shrink-0 mt-1",
-                          exp.type === "work"
-                            ? "bg-primary/10 text-primary"
-                            : "bg-accent/10 text-accent"
-                        )}
-                      >
-                        {exp.type === "work" ? (
-                          <Briefcase className="w-4 h-4" />
-                        ) : (
-                          <GraduationCap className="w-4 h-4" />
-                        )}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-display font-semibold text-foreground mb-1">
-                          {exp.title}
-                        </h3>
-                        <p className="text-primary font-medium mb-2">{exp.company}</p>
-                        <div className="flex flex-wrap items-center gap-3">
-                          <span className="text-sm text-muted-foreground">{exp.period}</span>
-                          {exp.location && (
-                            <span className="text-sm text-muted-foreground">• {exp.location}</span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    {exp.description && (
-                      <p className="text-muted-foreground text-sm mb-4">{exp.description}</p>
-                    )}
-                    {exp.achievements.length > 0 && (
-                      <ul className="space-y-2">
-                        {exp.achievements.map((achievement, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex gap-2">
-                            <span className="text-primary mt-1">•</span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                  <ExperienceItem exp={exp} />
                 </div>
               </div>
             ))}

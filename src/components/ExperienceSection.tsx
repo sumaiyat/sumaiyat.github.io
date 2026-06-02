@@ -21,7 +21,7 @@ const experiences = [
     title: "Senior Product Manager (Product & Engineering Lead)",
     company: "Repocket",
     location: "Remote",
-    period: "February 2025 – Present",
+    period: "February 2025 – January 2026",
     description: "",
     achievements: [
       "Led a cross-functional team of 12 across product, engineering, BI, operations, QA, DevOps, and design to deliver onboarding, referral, and monetization features, while driving integrations with external partners that improved DAU, retention, conversion rates, and platform revenue.",

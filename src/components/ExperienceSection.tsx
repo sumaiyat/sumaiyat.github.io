@@ -5,6 +5,19 @@ import { cn } from "@/lib/utils";
 const experiences = [
   {
     type: "work",
+    title: "Product Management Consultant",
+    company: "LinkedIn AI Trainer Team (Contractual)",
+    location: "Remote",
+    period: "May 2026 – Present",
+    description: "",
+    achievements: [
+      "Trained and evaluated AI on product management topics, including Feasibility & Technical Planning and Scaling & Lifecycle Transitions.",
+      "Assessed AI outputs for accuracy, completeness, and technical quality across dependencies, constraints, scaling, governance, migration, and deprecation workflows.",
+      "Delivered structured feedback to improve model performance and content reliability."
+    ],
+  },
+  {
+    type: "work",
     title: "Senior Product Manager (Product & Engineering Lead)",
     company: "Repocket",
     location: "Remote",

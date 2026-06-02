@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
 const experiences = [
   {
     type: "work",
-    title: "Product Management Consultant",
-    company: "LinkedIn AI Trainer Team (Contractual)",
+    title: "Product Management Consultant (AI Trainer Team)",
+    company: "LinkedIn",
     location: "Remote",
-    period: "May 2026 – Present",
+    period: "May 2026 – Present (Contractual)",
     description: "",
     achievements: [
       "Trained and evaluated AI on product management topics, including Feasibility & Technical Planning and Scaling & Lifecycle Transitions.",
@@ -146,7 +146,7 @@ const ExperienceItem = ({ exp }: { exp: typeof experiences[0] }) => {
   const hasDetails = !!exp.description || exp.achievements.length > 0;
 
   return (
-    <div 
+    <div
       className={cn(
         "p-6 rounded-2xl border border-border bg-card transition-all duration-300",
         hasDetails ? "cursor-pointer hover:shadow-card" : "hover:shadow-card"
@@ -199,7 +199,7 @@ const ExperienceItem = ({ exp }: { exp: typeof experiences[0] }) => {
         </div>
       </div>
 
-      <div 
+      <div
         className={cn(
           "grid transition-all duration-300 ease-in-out",
           isOpen ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"

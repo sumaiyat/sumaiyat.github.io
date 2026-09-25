@@ -36,7 +36,7 @@ export const Navigation = () => {
   }, []);
 
   const scrollToSection = (href: string) => {
-    setIsMobileMenuOpen(false); // Close mobile menu when a link is clicked
+    setIsMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -46,20 +46,21 @@ export const Navigation = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled || isMobileMenuOpen
-          ? "bg-background/95 backdrop-blur-xl border-b border-border py-4"
-          : "bg-transparent py-6"
+          ? "bg-background/95 backdrop-blur-xl border-b border-border"
+          : "bg-transparent border-b border-transparent"
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 flex items-center justify-between h-14">
+        {/* Logo */}
         <a
           href="#home"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("#home");
           }}
-          className="text-2xl font-display font-semibold text-gradient"
+          className="font-display text-xl font-semibold text-foreground tracking-tight hover:opacity-80 transition-opacity"
         >
           STZ
         </a>
@@ -75,27 +76,25 @@ export const Navigation = () => {
                 scrollToSection(link.href);
               }}
               className={cn(
-                "text-sm font-medium transition-colors duration-300 relative",
+                "font-mono text-xs uppercase tracking-[0.12em] transition-colors duration-200",
                 activeSection === link.href.slice(1)
-                  ? "text-primary"
+                  ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               )}
             >
               {link.label}
-              {activeSection === link.href.slice(1) && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-primary rounded-full" />
-              )}
             </a>
           ))}
         </div>
 
+        {/* CTA Button */}
         <a
           href="#contact"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("#contact");
           }}
-          className="hidden md:inline-flex px-5 py-2.5 rounded-full bg-gradient-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
+          className="btn-ticket hidden md:inline-flex items-center gap-2 px-5 py-2 bg-gradient-primary text-primary-foreground font-mono font-semibold uppercase tracking-widest text-xs hover:opacity-90 transition-opacity"
         >
           Get in Touch
         </a>
@@ -106,7 +105,7 @@ export const Navigation = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
@@ -123,9 +122,9 @@ export const Navigation = () => {
                   scrollToSection(link.href);
                 }}
                 className={cn(
-                  "text-lg font-medium transition-colors duration-300",
+                  "font-mono text-sm uppercase tracking-[0.1em] transition-colors duration-200",
                   activeSection === link.href.slice(1)
-                    ? "text-primary"
+                    ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -139,7 +138,7 @@ export const Navigation = () => {
                   e.preventDefault();
                   scrollToSection("#contact");
                 }}
-                className="inline-flex w-full justify-center px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+                className="btn-ticket inline-flex w-full justify-center items-center gap-2 px-5 py-3 bg-gradient-primary text-primary-foreground font-mono font-semibold uppercase tracking-widest text-xs hover:opacity-90 transition-opacity"
               >
                 Get in Touch
               </a>
@@ -150,3 +149,4 @@ export const Navigation = () => {
     </nav>
   );
 };
+

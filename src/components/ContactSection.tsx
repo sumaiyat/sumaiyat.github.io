@@ -182,10 +182,10 @@ export const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-gradient-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="btn-ticket w-full py-4 rounded-none bg-gradient-primary text-primary-foreground font-mono font-semibold uppercase tracking-widest text-sm flex items-center justify-center gap-3 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-5 h-5" />
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  <Send className="w-4 h-4" />
+                  {isSubmitting ? "Sending..." : "Get in Touch"}
                 </button>
               </form>
             </div>

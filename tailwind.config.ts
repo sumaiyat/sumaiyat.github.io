@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Outfit", "sans-serif"],
-        body: ["Plus Jakarta Sans", "sans-serif"],
+        display: ["VT323", "monospace"],
+        body: ["Geist Mono Variable", "monospace"],
+        mono: ["Geist Mono Variable", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",

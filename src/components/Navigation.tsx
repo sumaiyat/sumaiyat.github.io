@@ -94,8 +94,9 @@ export const Navigation = () => {
             e.preventDefault();
             scrollToSection("#contact");
           }}
-          className="btn-ticket hidden md:inline-flex items-center gap-2 px-5 py-2 bg-gradient-primary text-primary-foreground font-mono font-semibold uppercase tracking-widest text-xs hover:opacity-90 transition-opacity"
+          className="btn-ticket hidden md:inline-flex items-center gap-2 px-5 py-2 text-foreground font-mono font-semibold uppercase tracking-widest text-xs"
         >
+          <span className="btn-ticket-shimmer" />
           Get in Touch
         </a>
 
@@ -138,8 +139,9 @@ export const Navigation = () => {
                   e.preventDefault();
                   scrollToSection("#contact");
                 }}
-                className="btn-ticket inline-flex w-full justify-center items-center gap-2 px-5 py-3 bg-gradient-primary text-primary-foreground font-mono font-semibold uppercase tracking-widest text-xs hover:opacity-90 transition-opacity"
+                className="btn-ticket inline-flex w-full justify-center items-center gap-2 px-5 py-3 text-foreground font-mono font-semibold uppercase tracking-widest text-xs"
               >
+                <span className="btn-ticket-shimmer" />
                 Get in Touch
               </a>
             </div>

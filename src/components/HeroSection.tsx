@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import { ArrowDown, Linkedin, Mail, Phone } from "lucide-react";
 
 // Pixel browser-bot: browser window body + eyes + arms + legs, like Vercel Ship
 const PixelBot = ({ size = 40, style }: { size?: number; style?: React.CSSProperties }) => {
-  const s = size / 40; // scale factor
   return (
     <svg
       width={size}
@@ -56,6 +56,13 @@ const BOTS = Array.from({ length: BOT_COUNT }, (_, i) => ({
 
 
 export const HeroSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToAbout = () => {
     const element = document.querySelector("#about");
     if (element) {
@@ -72,8 +79,19 @@ export const HeroSection = () => {
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-hero" />
+
+      {/* Animated grid pattern (Vercel Ship style) */}
+      <div className="hero-grid absolute inset-0 pointer-events-none" />
+
+      {/* Scanline beam effect */}
+      <div className="hero-scanline absolute inset-0 pointer-events-none" />
+
+      {/* Glow orbs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-glow animation-delay-500" />
+
+      {/* Central radial glow */}
+      <div className="hero-radial-glow absolute pointer-events-none" />
 
       {/* Floating pixel bots */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -103,49 +121,67 @@ export const HeroSection = () => {
       <div className="container mx-auto px-6 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Greeting */}
-          <p className="text-primary font-medium mb-4 opacity-0 animate-fade-up">
+          <p
+            className={`text-primary font-medium mb-4 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.1s" }}
+          >
             Hello, I'm
           </p>
 
           {/* Name */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 opacity-0 animate-fade-up animation-delay-100">
+          <h1
+            className={`text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.25s" }}
+          >
             <span className="text-foreground">Syeda Sumaiya</span>
             <br />
             <span className="text-gradient">Tabassum Zakaria</span>
           </h1>
 
           {/* Title */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 opacity-0 animate-fade-up animation-delay-200">
+          <p
+            className={`text-xl md:text-2xl text-muted-foreground mb-4 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.45s" }}
+          >
             Senior Product Manager (Product & Engineering Lead)
           </p>
-          <p className="text-lg text-primary mb-8 opacity-0 animate-fade-up animation-delay-200">
+          <p
+            className={`text-lg text-primary mb-8 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.6s" }}
+          >
             SaaS Platforms & Growth | B2B & B2C Products | Monetization, Retention & Integrations
           </p>
 
           {/* Description */}
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 opacity-0 animate-fade-up animation-delay-300">
+          <p
+            className={`text-lg text-muted-foreground max-w-2xl mx-auto mb-12 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.75s" }}
+          >
             Senior Product Manager & Engineering Lead with {yearsOfExperience}+ years of experience building scalable B2B and B2C SaaS platforms. I specialize in bridging growth strategy with technical execution to drive user retention, optimize monetization, and accelerate revenue.
           </p>
 
           {/* Social Links */}
-          <div className="flex items-center justify-center gap-4 mb-12 opacity-0 animate-fade-up animation-delay-400">
+          <div
+            className={`flex items-center justify-center gap-4 mb-12 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.9s" }}
+          >
             <a
               href="https://www.linkedin.com/in/sumaiyatzakaria"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+              className="hero-social-link p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="mailto:sumaiyatzakaria@gmail.com"
-              className="p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+              className="hero-social-link p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             >
               <Mail className="w-5 h-5" />
             </a>
             <a
               href="tel:+15627726552"
-              className="p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+              className="hero-social-link p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             >
               <Phone className="w-5 h-5" />
             </a>
@@ -154,7 +190,8 @@ export const HeroSection = () => {
           {/* Scroll indicator */}
           <button
             onClick={scrollToAbout}
-            className="opacity-0 animate-fade-up animation-delay-500 group"
+            className={`group hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "1.05s" }}
           >
             <div className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
               <span className="text-sm">Scroll to explore</span>
@@ -166,4 +203,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-

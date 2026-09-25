@@ -182,8 +182,9 @@ export const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn-ticket w-full py-4 rounded-none bg-gradient-primary text-primary-foreground font-mono font-semibold uppercase tracking-widest text-sm flex items-center justify-center gap-3 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-ticket w-full py-4 rounded-none text-foreground font-mono font-semibold uppercase tracking-widest text-sm flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
+                  <span className="btn-ticket-shimmer" />
                   <Send className="w-4 h-4" />
                   {isSubmitting ? "Sending..." : "Get in Touch"}
                 </button>

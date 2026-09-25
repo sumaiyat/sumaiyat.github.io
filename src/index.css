@@ -167,6 +167,10 @@ All colors MUST be HSL.
   .animation-delay-500 { animation-delay: 0.5s; }
 }
 
+/* ============================================
+   BASE KEYFRAMES 
+   ============================================ */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -233,32 +237,182 @@ All colors MUST be HSL.
   100% { transform: translate(0px, 0px) rotate(0deg); }
 }
 
+/* ============================================
+   VERCEL SHIP-STYLE HERO ANIMATIONS
+   ============================================ */
 
-@keyframes shimmer-sweep {
-  0% { transform: translateX(-100%) skewX(-15deg); }
-  100% { transform: translateX(250%) skewX(-15deg); }
+/* Staggered reveal with blur (replaces simple fade-up) */
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(6px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.hero-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Animated grid background (Vercel Ship style) */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 70%);
+  animation: grid-fade-in 2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes grid-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Scanline beam sweeping down (Vercel Ship style) */
+.hero-scanline {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    hsl(174 72% 56% / 0.04) 45%,
+    hsl(174 72% 56% / 0.08) 50%,
+    hsl(174 72% 56% / 0.04) 55%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: scanline-sweep 4s ease-in-out infinite;
+}
+
+@keyframes scanline-sweep {
+  0% { background-position: 0% -100%; }
+  50% { background-position: 0% 200%; }
+  100% { background-position: 0% -100%; }
+}
+
+/* Central radial glow (Vercel Ship style hero glow) */
+.hero-radial-glow {
+  width: 600px;
+  height: 600px;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    hsl(174 72% 56% / 0.08) 0%,
+    hsl(200 80% 50% / 0.04) 30%,
+    transparent 65%
+  );
+  animation: radial-glow-pulse 5s ease-in-out infinite;
+}
+
+@keyframes radial-glow-pulse {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+}
+
+/* Social link pop-in */
+.hero-social-link {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px hsl(174 72% 56% / 0.3);
+}
+
+/* ============================================
+   VERCEL SHIP-STYLE "GET IN TOUCH" BUTTON
+   Gradient border with shimmer + glow on hover
+   ============================================ */
 
 .btn-ticket {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  border: none;
+  background: transparent;
+  padding: 2px; /* border thickness */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Animated gradient border */
 .btn-ticket::before {
   content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    hsl(174 72% 56%) 0%,
+    hsl(200 80% 50%) 25%,
+    hsl(38 92% 60%) 50%,
+    hsl(200 80% 50%) 75%,
+    hsl(174 72% 56%) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-rotate 4s linear infinite;
+  z-index: -2;
+}
+
+/* Inner fill */
+.btn-ticket::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: hsl(222 47% 8%);
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shimmer sweep overlay on hover */
+.btn-ticket .btn-ticket-shimmer {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     105deg,
     transparent 40%,
-    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.12) 50%,
     transparent 60%
   );
   transform: translateX(-100%) skewX(-15deg);
-  animation: shimmer-sweep 2.4s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
+}
+
+.btn-ticket:hover .btn-ticket-shimmer {
+  animation: shimmer-sweep 1.2s ease-in-out;
+}
+
+.btn-ticket:hover {
+  box-shadow: 
+    0 0 20px hsl(174 72% 56% / 0.25),
+    0 0 40px hsl(174 72% 56% / 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-ticket:hover::after {
+  background: hsl(222 47% 10%);
+}
+
+.btn-ticket:hover::before {
+  animation: gradient-rotate 1.5s linear infinite;
+}
+
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(250%) skewX(-15deg); }
 }
 
 .btn-ticket > * {

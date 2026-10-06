@@ -133,9 +133,7 @@ export const HeroSection = () => {
             className={`text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
             style={{ transitionDelay: "0.25s" }}
           >
-            <span className="text-foreground">Syeda Sumaiya</span>
-            <br />
-            <span className="text-gradient">Tabassum Zakaria</span>
+            <span className="text-foreground">Sumaiya</span>
           </h1>
 
           {/* Title */}

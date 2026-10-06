@@ -60,7 +60,7 @@ export const Navigation = () => {
             e.preventDefault();
             scrollToSection("#home");
           }}
-          className="font-display text-xl font-semibold text-foreground tracking-tight hover:opacity-80 transition-opacity"
+          className="font-display text-xl font-bold text-gradient hover:opacity-80 transition-opacity"
         >
           STZ
         </a>

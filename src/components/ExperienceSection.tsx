@@ -2,6 +2,21 @@ import { useState } from "react";
 import { Briefcase, GraduationCap, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+// Logo mapping for companies
+const companyLogos: Record<string, { src: string; bg: string; style?: React.CSSProperties }> = {
+  "National Services Group, Inc.": { src: "/logos/nsg.png", bg: "bg-white" },
+  "LinkedIn": { src: "/logos/linkedin.svg", bg: "bg-[#0A66C2]" },
+  "Repocket": { src: "/logos/repocket.svg", bg: "bg-[#1A1A2E]" },
+  "10 Minute School (Online Tutoring & Learning Platform - EdTech)": { src: "/logos/10minuteschool.svg", bg: "bg-white" },
+  "B-Trac Solutions Limited (Network for Migrants, Foreign Employers & Recruiting Agencies - Ami Probashi)": { src: "/logos/amiprobashi.png", bg: "bg-white" },
+  "Evaly.com.bd (E-commerce Platform)": { src: "/logos/evaly.png", bg: "bg-white" },
+  "Google (Street View - Geo Data Operations & Field Support)": { src: "/logos/google.svg", bg: "bg-white" },
+  "Brandt International (Business Consulting & Process Outsourcing - BPO)": { src: "/logos/brandt-dark.png", bg: "bg-white" },
+  "HappyGD Technology PLT (WeChat)": { src: "/logos/wechat.svg", bg: "bg-[#07C160]" },
+  "University of East London": { src: "/logos/uel.svg", bg: "bg-white" },
+  "FTMS College": { src: "/logos/ftms.png", bg: "bg-[#1a3a6b]" },
+};
+
 const experiences = [
   {
     type: "work",
@@ -183,7 +198,7 @@ const ExperienceItem = ({ exp }: { exp: typeof experiences[0] }) => {
         </div>
         <div className="flex-1">
           <div className="flex justify-between items-start gap-4">
-            <div>
+            <div className="flex-1 min-w-0">
               <h3 className="text-xl font-display font-semibold text-foreground mb-1">
                 {exp.title}
               </h3>
@@ -195,19 +210,36 @@ const ExperienceItem = ({ exp }: { exp: typeof experiences[0] }) => {
                 )}
               </div>
             </div>
-            {hasDetails && (
-              <button
-                className="p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors shrink-0"
-                aria-label="Toggle details"
-              >
-                <ChevronDown
+            <div className="flex items-center gap-2 shrink-0">
+              {companyLogos[exp.company] && (
+                <div
                   className={cn(
-                    "w-5 h-5 transition-transform duration-300",
-                    isOpen && "rotate-180"
+                    "w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden border border-border/50 shadow-sm",
+                    companyLogos[exp.company].bg
                   )}
-                />
-              </button>
-            )}
+                >
+                  <img
+                    src={companyLogos[exp.company].src}
+                    alt={exp.company}
+                    className="w-10 h-10 object-contain"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                </div>
+              )}
+              {hasDetails && (
+                <button
+                  className="p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="Toggle details"
+                >
+                  <ChevronDown
+                    className={cn(
+                      "w-5 h-5 transition-transform duration-300",
+                      isOpen && "rotate-180"
+                    )}
+                  />
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -138,24 +138,41 @@ export const HeroSection = () => {
 
           {/* Title */}
           <p
-            className={`text-xl md:text-2xl text-muted-foreground mb-4 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            className={`text-xl md:text-2xl text-foreground font-semibold mb-3 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
             style={{ transitionDelay: "0.45s" }}
           >
-            Senior Product Manager (Product & Engineering Lead)
+            Senior Product Manager
           </p>
           <p
-            className={`text-lg text-primary mb-8 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            className={`text-base md:text-lg text-primary font-mono mb-6 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
             style={{ transitionDelay: "0.6s" }}
           >
-            SaaS Platforms & Growth | B2B & B2C Products | Monetization, Retention & Integrations
+            SaaS Platforms &amp; Growth | B2B &amp; B2C Products | Monetization, Retention &amp; Integrations
           </p>
+
+          {/* Location & Authorization Badge */}
+          <div
+            className={`flex flex-wrap items-center justify-center gap-2 mb-8 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.7s" }}
+          >
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-secondary/80 border border-border text-muted-foreground">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Irvine, CA
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-primary/10 border border-primary/20 text-primary">
+              Authorized to work in the US
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-accent/10 border border-accent/20 text-accent">
+              95%+ US Conversion Performance
+            </span>
+          </div>
 
           {/* Description */}
           <p
-            className={`text-lg text-muted-foreground max-w-2xl mx-auto mb-12 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
-            style={{ transitionDelay: "0.75s" }}
+            className={`text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
+            style={{ transitionDelay: "0.8s" }}
           >
-            Senior Product Manager & Engineering Lead with {yearsOfExperience}+ years of experience building scalable B2B and B2C SaaS platforms. I specialize in bridging growth strategy with technical execution to drive user retention, optimize monetization, and accelerate revenue.
+            Senior Product Manager with 10+ years of experience building and scaling B2B and B2C SaaS products across EdTech, marketplaces, and digital consumer platforms. Strong in growth experimentation, monetization strategy, and cross-functional execution. Recently relocated to California with proven US revenue ownership experience.
           </p>
 
           {/* Social Links */}

@@ -9,7 +9,7 @@ export const AboutSection = () => {
           <div className="text-center mb-16">
             <p className="text-primary font-medium mb-4">About Me</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-              Product & Engineering <span className="text-gradient">Leader</span>
+              SaaS Platforms &amp; Growth <span className="text-gradient">Leader</span>
             </h2>
           </div>
 
@@ -50,29 +50,29 @@ export const AboutSection = () => {
             <div>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  I’m a Senior Product Manager with {yearsOfExperience}+ years of experience building and scaling B2B and B2C SaaS products across growth, platform, and marketplace environments.
+                  Senior Product Manager with {yearsOfExperience}+ years of experience building and scaling B2B and B2C SaaS products across EdTech, marketplaces, and digital consumer platforms.
                 </p>
                 <p>
-                  I’ve led cross-functional teams of up to 30+ engineers, designers, BI, and operations partners to ship onboarding, monetization, payments, and engagement initiatives that drive measurable impact. My work has contributed to 23% YoY revenue growth, 40% portfolio-level revenue contribution from new product launches, improved funnel conversion, and accelerated release cycles by 30%.
+                  Strong in growth experimentation, monetization strategy, and cross-functional execution. Recently relocated to California with proven US revenue ownership experience (95%+ US conversion performance). Authorized to work in the US.
                 </p>
                 <p>
-                  I operate at the intersection of growth and execution, defining roadmaps, prioritizing with data, running experimentation frameworks, and aligning engineering delivery with business outcomes. My experience spans EdTech, consumer marketplaces, and digital platforms with a strong focus on retention, monetization, and scalable infrastructure.
-                </p>
-                <p>
-                  With a technical foundation in software engineering and systems reliability, I’m comfortable working closely with engineering teams on APIs, mobile release management, analytics tooling, and platform migrations.
+                  Proven track record leading cross-functional teams of up to 30+ engineers, designers, BI, and operations partners—partnering directly with C-level executives (CEO, VP, CTO) to translate complex business and operational problems into clear product roadmaps and scalable solutions.
                 </p>
               </div>
 
-              {/* Certifications */}
+              {/* Certifications & Badges */}
               <div className="mt-6 flex flex-wrap gap-2">
-                <span className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium">
+                <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
                   Certified Scrum Master (CSM)
                 </span>
-                <span className="px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-medium">
+                <span className="px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium">
                   Certified Scrum Product Owner (CSPO)
                 </span>
-                <span className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium">
-                  ITIL v3 Foundation Certificate
+                <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
+                  ITIL v3 Foundation Certificate - AXELOS
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-secondary border border-border text-foreground text-xs font-medium">
+                  Authorized to work in the US
                 </span>
               </div>
 

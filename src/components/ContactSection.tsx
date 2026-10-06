@@ -69,6 +69,12 @@ export const ContactSection = () => {
       value: "linkedin.com/in/sumaiyatzakaria",
       href: "https://www.linkedin.com/in/sumaiyatzakaria",
     },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Irvine, CA, United States",
+      href: undefined,
+    },
   ];
 
   return (
@@ -82,7 +88,7 @@ export const ContactSection = () => {
               {"Let's Work"} <span className="text-gradient">Together</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {"Have a project in mind or looking for a product leader? I'd love to hear from you. Drop me a message and let's discuss how we can create impact together."}
+              {"Looking for a Technical Product Manager or Systems Leader? I'd love to connect. Drop me a message to discuss roadmap initiatives, platform integrations, or new opportunities."}
             </p>
           </div>
 
@@ -98,11 +104,8 @@ export const ContactSection = () => {
 
               <div className="space-y-6">
                 {contactInfo.map((info) => (
-                  <a
+                  <div
                     key={info.label}
-                    href={info.href}
-                    target={info.label === "LinkedIn" ? "_blank" : undefined}
-                    rel={info.label === "LinkedIn" ? "noopener noreferrer" : undefined}
                     className="flex items-center gap-4 group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
@@ -110,23 +113,34 @@ export const ContactSection = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">{info.label}</p>
-                      <p className="text-foreground font-medium group-hover:text-primary transition-colors">
-                        {info.value}
-                      </p>
+                      {info.href ? (
+                        <a
+                          href={info.href}
+                          target={info.label === "LinkedIn" ? "_blank" : undefined}
+                          rel={info.label === "LinkedIn" ? "noopener noreferrer" : undefined}
+                          className="text-foreground font-medium group-hover:text-primary transition-colors"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-foreground font-medium">
+                          {info.value}
+                        </p>
+                      )}
                     </div>
-                  </a>
+                  </div>
                 ))}
               </div>
 
-              {/* Availability card */}
+              {/* Availability & Work Authorization card */}
               <div className="mt-12 p-6 rounded-2xl border border-border bg-card">
-                <p className="text-sm text-muted-foreground mb-2">Currently</p>
+                <p className="text-sm text-muted-foreground mb-1">Status &amp; Authorization</p>
                 <p className="text-lg font-display font-semibold text-foreground">
-                  Open to new opportunities
+                  Authorized to work in the US
                 </p>
                 <div className="flex items-center gap-2 mt-2">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-sm text-green-500">Available for work</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-sm text-emerald-500 font-medium">Based in Irvine, CA</span>
                 </div>
               </div>
             </div>

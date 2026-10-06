@@ -1,41 +1,92 @@
-import { BarChart3, Briefcase, Layout, Settings, TrendingUp, Users } from "lucide-react";
+import { BarChart3, Award, Layout, Cpu, TrendingUp, Server } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const skills = [
   {
-    category: "Product & Strategy",
-    icon: Briefcase,
-    items: ["Product Vision & Roadmapping", "Agile / Scrum / Kanban", "OKRs", "Product-Led Growth", "Stakeholder Management", "Monetization Strategy"],
-    color: "primary",
-  },
-  {
-    category: "Analytics & Data",
-    icon: BarChart3,
-    items: ["GA4", "Mixpanel", "Metabase", "Looker Studio", "SQL", "A/B Testing", "Funnel Analysis", "Cohort Analysis"],
-    color: "accent",
-  },
-  {
-    category: "Design & Tools",
-    icon: Layout,
-    items: ["Figma", "Jira", "Notion", "Confluence", "WebEngage", "Miro", "Slack", "Trello", "Linear"],
-    color: "primary",
-  },
-  {
-    category: "Technical Familiarity",
-    icon: Settings,
-    items: ["REST APIs", "CPAPI", "Affise", "Postback Tracking", "Cloudflare", "ERP/CRM/CMS/LMS", "Firebase", "CI/CD Workflows"],
-    color: "accent",
-  },
-  {
-    category: "Growth & Optimization",
+    category: "Core Product & Growth",
     icon: TrendingUp,
-    items: ["Referral System Design", "Conversion Rate Optimization", "Retention Campaigns", "Tiered Rewards", "EPC Logic", "Revenue Optimization"],
+    items: [
+      "Product Strategy",
+      "Roadmapping",
+      "OKRs",
+      "Agile (Scrum, Kanban)",
+      "Product-Led Growth",
+      "Monetization Strategy",
+      "Retention & Funnel Optimization",
+      "Stakeholder Management",
+    ],
     color: "primary",
   },
   {
-    category: "Leadership & Soft Skills",
-    icon: Users,
-    items: ["Cross-Functional Leadership", "Analytical Thinking", "Problem Solving", "Communication & Storytelling", "Mentoring & Team Development"],
+    category: "Analytics & Experimentation",
+    icon: BarChart3,
+    items: [
+      "Mixpanel",
+      "GA4",
+      "Metabase",
+      "Looker Studio",
+      "SQL (Basic)",
+      "A/B Testing",
+      "Funnel Analysis",
+      "Cohort Analysis",
+      "KPI Dashboards",
+    ],
+    color: "accent",
+  },
+  {
+    category: "Platform & Technical",
+    icon: Server,
+    items: [
+      "REST APIs",
+      "ERP / CRM / CMS / LMS Systems",
+      "Mobile Release Management (Flutter, iOS, Android)",
+      "CI/CD",
+      "Cloudflare",
+      "Firebase",
+      "Postback Tracking",
+      "Affise",
+    ],
+    color: "primary",
+  },
+  {
+    category: "Tools",
+    icon: Layout,
+    items: [
+      "Jira",
+      "Confluence",
+      "Notion",
+      "Figma",
+      "Linear",
+      "Slack",
+      "Miro",
+      "WebEngage",
+    ],
+    color: "accent",
+  },
+  {
+    category: "Growth & Monetization Execution",
+    icon: Cpu,
+    items: [
+      "95%+ US Traffic Efficiency",
+      "EPC Ranking Logic",
+      "External Provider Integrations",
+      "Referral & Tiered Rewards",
+      "Fraud & Risk Controls",
+      "Feasibility & Lifecycle Transitions",
+    ],
+    color: "primary",
+  },
+  {
+    category: "Certifications & Agile Delivery",
+    icon: Award,
+    items: [
+      "Certified Scrum Master (CSM)",
+      "Certified Scrum Product Owner (CSPO)",
+      "ITIL v3 Foundation Certificate - AXELOS",
+      "Sprint Planning & Velocity",
+      "Backlog Grooming",
+      "Cross-Functional Coordination",
+    ],
     color: "accent",
   },
 ];
@@ -52,8 +103,8 @@ export const SkillsSection = () => {
               My <span className="text-gradient">Skills</span> & Expertise
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit spanning product management, data analytics, 
-              technical understanding, and leadership capabilities.
+              A comprehensive toolkit spanning technical product management, data analytics, 
+              scalable systems architecture, and Agile delivery.
             </p>
           </div>
 
@@ -100,15 +151,20 @@ export const SkillsSection = () => {
             <h3 className="text-xl font-display font-semibold text-foreground mb-6 text-center">
               Languages
             </h3>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
               <div className="text-center">
-                <p className="text-lg font-medium text-foreground">English & Bengali</p>
-                <p className="text-sm text-muted-foreground">Professional proficiency</p>
+                <p className="text-lg font-medium text-foreground">English</p>
+                <p className="text-sm text-primary font-mono">Professional</p>
               </div>
-              <div className="w-px bg-border" />
+              <div className="w-px h-8 bg-border" />
               <div className="text-center">
-                <p className="text-lg font-medium text-foreground">Urdu & Hindi</p>
-                <p className="text-sm text-muted-foreground">Conversational proficiency</p>
+                <p className="text-lg font-medium text-foreground">Bengali</p>
+                <p className="text-sm text-primary font-mono">Native</p>
+              </div>
+              <div className="w-px h-8 bg-border" />
+              <div className="text-center">
+                <p className="text-lg font-medium text-foreground">Urdu &amp; Hindi</p>
+                <p className="text-sm text-muted-foreground font-mono">Conversational</p>
               </div>
             </div>
           </div>
@@ -117,3 +173,4 @@ export const SkillsSection = () => {
     </section>
   );
 };
+

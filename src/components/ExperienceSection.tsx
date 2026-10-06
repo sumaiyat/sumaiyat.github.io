@@ -5,22 +5,35 @@ import { cn } from "@/lib/utils";
 const experiences = [
   {
     type: "work",
-    title: "Product Management Consultant (AI Trainer Team)",
-    company: "LinkedIn",
-    location: "Remote",
-    period: "May 2026 – Present (Contractual)",
+    title: "Technical Product Manager",
+    company: "National Services Group, Inc.",
+    location: "Irvine, California, United States (On-site)",
+    period: "June 2026 – Present",
     description: "",
     achievements: [
-      "Trained and evaluated AI on product management topics, including Feasibility & Technical Planning and Scaling & Lifecycle Transitions.",
-      "Assessed AI outputs for accuracy, completeness, and technical quality across dependencies, constraints, scaling, governance, migration, and deprecation workflows.",
-      "Delivered structured feedback to improve model performance and content reliability."
+      "Serve as the sole product lead for the CWP platform, owning product strategy, discovery, roadmap prioritization, requirements, and end-to-end delivery across business-critical technology initiatives.",
+      "Partner directly with the CEO and VP to define product direction, evaluate priorities and trade-offs, and translate executive objectives into actionable development plans, while reporting delivery progress, risks, and key decisions to the CTO.",
+      "Lead day-to-day product execution with the development team, converting complex operational workflows into PRDs, user stories, system and API requirements, acceptance criteria, and release plans.",
+      "Act as the central point of accountability across executive leadership, business stakeholders, and engineering, resolving ambiguity, managing dependencies, and driving decisions from concept through production release."
     ],
   },
   {
     type: "work",
-    title: "Senior Product Manager (Product & Engineering Lead)",
+    title: "AI Trainer (Contract)",
+    company: "LinkedIn",
+    location: "United States (Remote)",
+    period: "May 2026 – July 2026",
+    description: "",
+    achievements: [
+      "Product Manager Consultant - Scaling & Lifecycle Transitions",
+      "Product Manager Consultant - Feasibility & Technical Planning"
+    ],
+  },
+  {
+    type: "work",
+    title: "Head of Product & Engineering",
     company: "Repocket",
-    location: "Remote",
+    location: "Singapore (Remote)",
     period: "February 2025 – January 2026",
     description: "",
     achievements: [
@@ -38,10 +51,10 @@ const experiences = [
   {
     type: "work",
     title: "Senior Product Manager & Scrum Master",
-    company: "10 Minute School (Online Tutoring & Learning Platform – EdTech)",
+    company: "10 Minute School (Online Tutoring & Learning Platform - EdTech)",
     location: "Dhaka, Bangladesh",
     period: "February 2022 – July 2024",
-    description: "",
+    description: "Product Manager (Platform, K-12 & Skill Development) & Scrum Master",
     achievements: [
       "Led and collaborated with a cross-functional team of 31 engineers, DevOps, QA, designers, and BI specialists, in collaboration with 9 PMs, to deliver impactful platform and engagement features.",
       "Owned end-to-end B2B and B2C payment flows, improving transaction success rate and building scalable checkout infrastructure across web and mobile.",
@@ -51,7 +64,7 @@ const experiences = [
       "Analyzed user funnel data using Mixpanel and Metabase, identifying drop-off points and implementing UX improvements that reduced checkout abandonment by 12%.",
       "Drove 23% YoY revenue growth through feature-level experimentation and product-led engagement initiatives.",
       "Mentored 8+ Product Managers, improving roadmap prioritization through KPI-driven decision frameworks.",
-      "Led Agile delivery across 3 Scrum teams of PMs, developers, and QA, aligning sprint planning with quarterly business goals.",
+      "Led Agile delivery across 3 Scrum teams of PMs, developers, and QA as Scrum Master, aligning sprint planning with quarterly business goals.",
       "Improved sprint completion rate from 75% to 92% by restructuring backlog grooming and release planning workflows.",
       "Increased team delivery consistency through proactive blocker resolution and cross-functional coordination."
     ],
@@ -59,7 +72,7 @@ const experiences = [
   {
     type: "work",
     title: "Product Manager",
-    company: "B–Trac Solutions Limited (Ami Probashi)",
+    company: "B-Trac Solutions Limited (Network for Migrants, Foreign Employers & Recruiting Agencies - Ami Probashi)",
     location: "Dhaka, Bangladesh",
     period: "February 2021 – August 2021",
     description: "",
@@ -87,7 +100,7 @@ const experiences = [
   {
     type: "work",
     title: "Software Support Engineer (APAC)",
-    company: "Google (Street View – Geo Data Operations & Field Support)",
+    company: "Google (Street View - Geo Data Operations & Field Support)",
     location: "Kuala Lumpur, Malaysia",
     period: "March 2018 – March 2020",
     description: "",
@@ -101,7 +114,7 @@ const experiences = [
   {
     type: "work",
     title: "Network Administrator",
-    company: "Brandt International (Business Consulting & Process Outsourcing – BPO)",
+    company: "Brandt International (Business Consulting & Process Outsourcing - BPO)",
     location: "Kuala Lumpur, Malaysia",
     period: "March 2017 – November 2017",
     description: "",

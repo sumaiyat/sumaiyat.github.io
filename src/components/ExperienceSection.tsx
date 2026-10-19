@@ -29,7 +29,9 @@ const experiences = [
       "Serve as the sole product lead for the CWP platform, owning product strategy, discovery, roadmap prioritization, requirements, and end-to-end delivery across business-critical technology initiatives.",
       "Partner directly with the CEO and VP to define product direction, evaluate priorities and trade-offs, and translate executive objectives into actionable development plans, while reporting delivery progress, risks, and key decisions to the CTO.",
       "Lead day-to-day product execution with the development team, converting complex operational workflows into PRDs, user stories, system and API requirements, acceptance criteria, and release plans.",
-      "Act as the central point of accountability across executive leadership, business stakeholders, and engineering, resolving ambiguity, managing dependencies, and driving decisions from concept through production release."
+      "Act as the central point of accountability across executive leadership, business stakeholders, and engineering, resolving ambiguity, managing dependencies, and driving decisions from concept through production release.",
+      "Defined requirements and epics for payments and payroll features, including eCheck payment infrastructure and Direct Deposit with Paychex export.",
+      "Scoped third party property data integrations (RentCast, Datafiniti) to automate home age validation, recommending fuzzy address matching to reduce false negatives."
     ],
   },
   {
@@ -38,10 +40,10 @@ const experiences = [
     company: "LinkedIn",
     location: "United States (Remote)",
     period: "May 2026 – July 2026",
-    description: "",
+    description: "Contract role evaluating and improving AI model responses on product management topics.",
     achievements: [
-      "Product Manager Consultant - Scaling & Lifecycle Transitions",
-      "Product Manager Consultant - Feasibility & Technical Planning"
+      "Assessed and refined model output on scaling and lifecycle transitions, feasibility assessment and technical planning.",
+      "Applied 10+ years of product experience to judge accuracy, depth and practical usefulness of AI generated guidance."
     ],
   },
   {
@@ -114,7 +116,7 @@ const experiences = [
   },
   {
     type: "work",
-    title: "Software Support Engineer (APAC)",
+    title: "Software Support Engineer (Contract)",
     company: "Google (Street View - Geo Data Operations & Field Support)",
     location: "Kuala Lumpur, Malaysia",
     period: "March 2018 – March 2020",
@@ -140,7 +142,7 @@ const experiences = [
   },
   {
     type: "work",
-    title: "Software Engineer",
+    title: "Software Engineer Intern",
     company: "HappyGD Technology PLT (WeChat)",
     location: "Kuala Lumpur, Malaysia",
     period: "February 2016 – May 2016",
@@ -283,7 +285,7 @@ export const ExperienceSection = () => {
               Experience & <span className="text-gradient">Education</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A timeline of my professional journey from Software Engineer to Senior Product Manager.
+              A timeline of my professional journey from software engineering to technical product leadership.
             </p>
           </div>
 

@@ -9,7 +9,7 @@ export const AboutSection = () => {
           <div className="text-center mb-16">
             <p className="text-primary font-medium mb-4">About Me</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-              SaaS Platforms &amp; Growth <span className="text-gradient">Leader</span>
+              Product Leader Who <span className="text-gradient">Builds</span>
             </h2>
           </div>
 
@@ -50,26 +50,29 @@ export const AboutSection = () => {
             <div>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Senior Product Manager with {yearsOfExperience}+ years of experience building and scaling B2B and B2C SaaS products across EdTech, marketplaces, and digital consumer platforms.
+                  I'm a technical product manager who has spent {yearsOfExperience}+ years building SaaS platforms where payments, integrations and revenue meet.
                 </p>
                 <p>
-                  Strong in growth experimentation, monetization strategy, and cross-functional execution. Recently relocated to California with proven US revenue ownership experience (95%+ US conversion performance). Authorized to work in the US.
+                  I started on the engineering side: a software engineering degree, network administration, and two years as a Software Support Engineer at Google resolving production issues across distributed systems. That foundation shapes how I lead product. I write API and system requirements engineers can build from, and I can go deep on architecture tradeoffs.
                 </p>
                 <p>
-                  Proven track record leading cross-functional teams of up to 30+ engineers, designers, BI, and operations partners—partnering directly with C-level executives (CEO, VP, CTO) to translate complex business and operational problems into clear product roadmaps and scalable solutions.
+                  Most recently I was Head of Product &amp; Engineering at Repocket (2M+ users), and today I'm the sole product lead for the College Works Painting platform in Irvine, CA, owning payments, payroll and data integrations. I'm now building hands on with AI: LLM applications, RAG and agents.
                 </p>
               </div>
 
-              {/* Certifications & Badges */}
+              {/* Badges */}
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
-                  Certified Scrum Master (CSM)
+                  Payments &amp; Checkout
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium">
-                  Certified Scrum Product Owner (CSPO)
+                  Third Party Integrations
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
-                  ITIL v3 Foundation Certificate - AXELOS
+                  AI Products
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-secondary border border-border text-foreground text-xs font-medium">
+                  CSM · CSPO · ITIL v3
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-secondary border border-border text-foreground text-xs font-medium">
                   Authorized to work in the US
@@ -83,8 +86,8 @@ export const AboutSection = () => {
                   <p className="text-xs text-muted-foreground mt-1">Years Experience</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-display font-bold text-gradient-accent">30+</p>
-                  <p className="text-xs text-muted-foreground mt-1">Team Members Led</p>
+                  <p className="text-2xl font-display font-bold text-gradient-accent">15+</p>
+                  <p className="text-xs text-muted-foreground mt-1">Provider Integrations</p>
                 </div>
                 <div>
                   <p className="text-2xl font-display font-bold text-gradient">23%</p>

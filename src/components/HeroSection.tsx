@@ -133,7 +133,7 @@ export const HeroSection = () => {
             className={`text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
             style={{ transitionDelay: "0.25s" }}
           >
-            <span className="text-foreground">Sumaiya</span>
+            <span className="text-foreground">Sumaiya Zakaria</span>
           </h1>
 
           {/* Title */}
@@ -141,13 +141,13 @@ export const HeroSection = () => {
             className={`text-xl md:text-2xl text-foreground font-semibold mb-3 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
             style={{ transitionDelay: "0.45s" }}
           >
-            Senior Product Manager
+            Senior Technical Product Manager
           </p>
           <p
             className={`text-base md:text-lg text-primary font-mono mb-6 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
             style={{ transitionDelay: "0.6s" }}
           >
-            SaaS Platforms &amp; Growth | B2B &amp; B2C Products | Monetization, Retention &amp; Integrations
+            Payments | Integrations | AI Products | B2B &amp; B2C SaaS
           </p>
 
           {/* Location & Authorization Badge */}
@@ -163,7 +163,7 @@ export const HeroSection = () => {
               Authorized to work in the US
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-accent/10 border border-accent/20 text-accent">
-              95%+ US Conversion Performance
+              Ex Google
             </span>
           </div>
 
@@ -172,7 +172,7 @@ export const HeroSection = () => {
             className={`text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 hero-reveal ${isVisible ? "hero-reveal--visible" : ""}`}
             style={{ transitionDelay: "0.8s" }}
           >
-            Senior Product Manager with 10+ years of experience building and scaling B2B and B2C SaaS products across EdTech, marketplaces, and digital consumer platforms. Strong in growth experimentation, monetization strategy, and cross-functional execution. Recently relocated to California with proven US revenue ownership experience.
+            I build SaaS platforms where payments, integrations and revenue meet. Former Head of Product &amp; Engineering, ex Google, with 10+ years turning complex operations into products that ship and scale. Now building hands on with AI.
           </p>
 
           {/* Social Links */}

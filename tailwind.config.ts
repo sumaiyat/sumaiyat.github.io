@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Geist Variable", "system-ui", "sans-serif"],
+        display: ["VT323", "monospace"],
         body: ["Geist Variable", "system-ui", "sans-serif"],
         mono: ["Geist Mono Variable", "monospace"],
       },

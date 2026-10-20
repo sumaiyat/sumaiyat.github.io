@@ -1,5 +1,6 @@
 @import '@fontsource-variable/geist';
 @import '@fontsource-variable/geist-mono';
+@import '@fontsource/vt323';
 
 @tailwind base;
 @tailwind components;
@@ -51,7 +52,7 @@ All colors MUST be HSL.
     --shadow-card: 0 20px 40px -20px hsl(0 0% 0% / 0.5);
     --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
 
-    --font-display: 'Geist Variable', system-ui, sans-serif;
+    --font-display: 'VT323', monospace;
     --font-body: 'Geist Variable', system-ui, sans-serif;
     --font-mono: 'Geist Mono Variable', monospace;
 
@@ -117,7 +118,6 @@ All colors MUST be HSL.
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
   }
 }
 

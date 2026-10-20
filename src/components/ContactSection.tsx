@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { FileText, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const ContactSection = () => {
@@ -58,10 +58,10 @@ export const ContactSection = () => {
       href: "mailto:sumaiyatzakaria@gmail.com",
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 562 772 6552",
-      href: "tel:+15627726552",
+      icon: FileText,
+      label: "Resume",
+      value: "Download PDF",
+      href: "/Sumaiya_Zakaria_Resume.pdf",
     },
     {
       icon: Linkedin,
@@ -116,7 +116,7 @@ export const ContactSection = () => {
                       {info.href ? (
                         <a
                           href={info.href}
-                          target={info.label === "LinkedIn" ? "_blank" : undefined}
+                          target={info.label === "LinkedIn" || info.label === "Resume" ? "_blank" : undefined}
                           rel={info.label === "LinkedIn" ? "noopener noreferrer" : undefined}
                           className="text-foreground font-medium group-hover:text-primary transition-colors"
                         >

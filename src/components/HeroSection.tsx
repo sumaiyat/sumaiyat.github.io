@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowDown, Linkedin, Mail, Phone } from "lucide-react";
+import { ArrowDown, FileDown, Linkedin, Mail } from "lucide-react";
 
 // Pixel browser-bot: browser window body + eyes + arms + legs, like Vercel Ship
 const PixelBot = ({ size = 40, style }: { size?: number; style?: React.CSSProperties }) => {
@@ -184,21 +184,26 @@ export const HeroSection = () => {
               href="https://www.linkedin.com/in/sumaiyatzakaria"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="hero-social-link p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="mailto:sumaiyatzakaria@gmail.com"
+              aria-label="Email"
               className="hero-social-link p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             >
               <Mail className="w-5 h-5" />
             </a>
             <a
-              href="tel:+15627726552"
-              className="hero-social-link p-3 rounded-full border border-border bg-secondary/50 text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+              href="/Sumaiya_Zakaria_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-social-link inline-flex items-center gap-2 px-5 py-3 rounded-full border border-primary/40 bg-primary/10 text-primary font-mono text-sm hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
             >
-              <Phone className="w-5 h-5" />
+              <FileDown className="w-5 h-5" />
+              Download Resume
             </a>
           </div>
 

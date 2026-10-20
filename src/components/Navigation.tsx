@@ -88,7 +88,16 @@ export const Navigation = () => {
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
+        <div className="hidden md:flex items-center gap-5">
+        <a
+          href="/Sumaiya_Zakaria_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-mono text-xs uppercase tracking-[0.12em] text-primary hover:text-foreground transition-colors"
+        >
+          Resume
+        </a>
         <a
           href="#contact"
           onClick={(e) => {
@@ -100,6 +109,7 @@ export const Navigation = () => {
           <span className="btn-ticket-shimmer" />
           Get in Touch
         </a>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -133,6 +143,14 @@ export const Navigation = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/Sumaiya_Zakaria_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-sm uppercase tracking-[0.1em] text-primary"
+            >
+              Resume
+            </a>
             <div className="pt-4 mt-2 border-t border-border">
               <a
                 href="#contact"

@@ -222,7 +222,8 @@ const ExperienceItem = ({ exp }: { exp: typeof experiences[0] }) => {
                 >
                   <img
                     src={companyLogos[exp.company].src}
-                    alt={exp.company}
+                    alt={`${exp.company} logo`}
+                    loading="lazy"
                     className="w-10 h-10 object-contain"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                   />

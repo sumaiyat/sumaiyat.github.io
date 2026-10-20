@@ -2,8 +2,11 @@ export const BannerSection = () => {
   return (
     <div className="w-full relative">
       <img
-        src="/banner.png"
-        alt="Landscape Visual"
+        src="/banner.webp"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
         className="w-full h-auto"
       />
       {/* Optional dark overlay to blend it slightly with the dark theme */}

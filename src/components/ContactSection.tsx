@@ -88,7 +88,7 @@ export const ContactSection = () => {
               {"Let's Work"} <span className="text-gradient">Together</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {"Looking for a Technical Product Manager or Systems Leader? I'd love to connect. Drop me a message to discuss roadmap initiatives, platform integrations, or new opportunities."}
+              {"Looking for a Senior Technical PM, AI PM or Solutions leader? I'd love to connect. Drop me a message about a role, a product challenge, or payments, integrations and AI work."}
             </p>
           </div>
 

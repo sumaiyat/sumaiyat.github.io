@@ -63,7 +63,7 @@ export const Navigation = () => {
           }}
           className="font-display text-xl font-bold text-gradient hover:opacity-80 transition-opacity"
         >
-          STZ
+          SZ
         </a>
 
         {/* Desktop Navigation */}

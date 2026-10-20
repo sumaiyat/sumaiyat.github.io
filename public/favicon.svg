@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   <rect width="100" height="100" rx="22" fill="#020617" />
-  <text x="50" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="800" fill="url(#grad)" text-anchor="middle" dominant-baseline="middle">
-    STZ
+  <text x="50" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="url(#grad)" text-anchor="middle" dominant-baseline="middle">
+    SZ
   </text>
 </svg>

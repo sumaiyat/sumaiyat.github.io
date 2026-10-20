@@ -8,7 +8,7 @@ export const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo/Name */}
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-display font-bold text-gradient">STZ</span>
+              <span className="text-2xl font-display font-bold text-gradient">SZ</span>
             </div>
 
             {/* Social Links */}

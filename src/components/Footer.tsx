@@ -36,6 +36,9 @@ export const Footer = () => {
             </div>
 
           </div>
+          <p className="mt-8 text-center text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Syeda Sumaiya Tabassum Zakaria
+          </p>
         </div>
       </div>
     </footer>

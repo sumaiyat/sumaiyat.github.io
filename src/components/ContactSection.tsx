@@ -30,21 +30,25 @@ export const ContactSection = () => {
         }),
       });
 
-      if (response.ok) {
+      const result = await response.json().catch(() => ({}));
+      if (response.ok && String(result.success) === "true") {
         toast({
           title: "Message sent!",
           description: "Thank you for reaching out. I'll get back to you soon!",
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
-        throw new Error("Failed to send message");
+        throw new Error(result.message || "Failed to send message");
       }
     } catch (error) {
+      // Fallback: open the visitor's email app with the message prefilled, so nothing is lost.
+      const subject = encodeURIComponent(`Portfolio message from ${formData.name}`);
+      const body = encodeURIComponent(`${formData.message}\n\n${formData.name}\n${formData.email}`);
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try emailing me directly.",
-        variant: "destructive",
+        title: "Opening your email app",
+        description: "The form couldn't send, so your message is ready to send by email instead.",
       });
+      window.location.href = `mailto:sumaiyatzakaria@gmail.com?subject=${subject}&body=${body}`;
     } finally {
       setIsSubmitting(false);
     }

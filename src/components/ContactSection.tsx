@@ -16,17 +16,19 @@ export const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://formsubmit.co/ajax/sumaiyatzakaria@gmail.com", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
+          access_key: "e714bc8a-806c-4139-b162-e33c968ce1b8",
+          subject: `New portfolio message from ${formData.name}`,
+          from_name: "Sumaiya Zakaria Portfolio",
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: `New portfolio message from ${formData.name}`,
         }),
       });
 

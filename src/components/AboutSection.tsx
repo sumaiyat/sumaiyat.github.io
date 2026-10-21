@@ -59,7 +59,7 @@ export const AboutSection = () => {
                   Most recently I was Head of Product &amp; Engineering at Repocket (2M+ users), and today I'm the sole product lead for the College Works Painting platform in Irvine, CA, owning payments, payroll and data integrations. I'm now building hands on with AI: LLM applications, RAG and agents.
                 </p>
                 <p className="text-foreground/80">
-                  Outside work, I love travelling and giving back to the communities I'm part of. I try to live by strong principles, and I'm always up for trying something new.
+                  Outside work, I'm usually deep in a psychological thriller, listening to alternative rock, or travelling with a camera. I also love writing, giving back to my community, and figuring out how things work.
                 </p>
               </div>
 
